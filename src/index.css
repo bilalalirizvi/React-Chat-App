@@ -1,0 +1,21 @@
+/* GOOGLE FONT MONTSERRAT */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #f0f2f5;
+}
+div.swal-text {
+  text-align: center !important;
+}
+/* body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(200, 200, 200);
+} */
