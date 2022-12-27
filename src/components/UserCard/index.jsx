@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 import avatar from "../../assets/images/avatar.png";
 const UserCard = ({ item, chatOpenStatus, mobileView }) => {
-  // console.log("USER ID ===>", item);
   const {
     userName,
     profileImage = avatar,
@@ -23,7 +22,7 @@ const UserCard = ({ item, chatOpenStatus, mobileView }) => {
         </div>
       </div>
       <div className="user_name_and_last_message">
-        <p className="user_name">{userName && userName.toUpperCase()}</p>
+        <p className="user_name">{userName && userName?.toUpperCase()}</p>
         <p className="user_about">{status}</p>
       </div>
       <div className="user_last_message_time">

@@ -22,13 +22,13 @@ const UserChatBox = ({ userData, currentUserData, mobileView }) => {
   const [onlineStatus, setOnlineStatus] = useState({});
   const messagesEndRef = useRef(null);
 
-  useEffect(() => {
-    getCurrentUserData(userId).on("value", (snapshot) => {
-      setOnlineStatus(snapshot.val());
-    });
-  }, [userId]);
+  // useEffect(() => {
+  //   getCurrentUserData(userId).on("value", (snapshot) => {
+  //     setOnlineStatus(snapshot.val());
+  //   });
+  // }, [userId]);
 
-  // !st Step Create Chat Room With Id
+  // 1st Step Create Chat Room With Id
   const getChatroomId = () => {
     const [user1, user2] = [userData?.userId, currentUserData?.userId];
     return user1 < user2 ? user1.concat(user2) : user2.concat(user1);

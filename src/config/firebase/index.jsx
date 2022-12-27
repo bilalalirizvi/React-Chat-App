@@ -35,7 +35,7 @@ const getUsers = () => {
 };
 
 // GET CURRENT USER DATA
-const getCurrentUserData = (uid) => {
+const getCurrentUserData = async (uid) => {
   return database.ref("allUsers/" + uid);
 };
 
@@ -69,7 +69,6 @@ const userNameSet = (name) => {
 
 // Update user Online
 const userOnline = (val, crrUserId) => {
-  console.log({ val, crrUserId });
   if (crrUserId && val) {
     console.log("Inner");
     const updates = {};

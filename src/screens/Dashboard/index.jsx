@@ -80,8 +80,7 @@ const Dashboard = () => {
 
   const userSignOut = async () => {
     try {
-      console.log({ crrUserId });
-      await userOnline(false, crrUserId);
+      // await userOnline(false, crrUserId);
       await signOut();
       console.log("Sign-out");
       dispatch(removeUser());
@@ -105,7 +104,7 @@ const Dashboard = () => {
               <div className="header_boxes">
                 <img
                   className="profile_picture"
-                  src={currentUserData.profileImage || avatar}
+                  src={currentUserData?.profileImage || avatar}
                   alt="Profile Pic"
                 />
               </div>
@@ -174,7 +173,7 @@ const Dashboard = () => {
                 />
               );
             })} */}
-          {allUsers.length > 0 &&
+          {allUsers?.length > 0 &&
             allUsers
               .filter((val) => {
                 if (search === "") {
